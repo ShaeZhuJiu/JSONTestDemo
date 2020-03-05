@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-Ph-u4d">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="SDK自带解析" id="5UB-Yt-HDG">
+                                        <connections>
+                                            <action selector="JSONSerializationParse:" destination="BYZ-38-t0r" id="5qr-mw-FIw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="if9-Sz-Ow9"/>
+                                    <barButtonItem title="SBJson解析" id="fs8-TK-DOi">
+                                        <connections>
+                                            <action selector="SBParse:" destination="BYZ-38-t0r" id="b8n-dc-Y7R"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gSt-7s-bgL"/>
+                                    <barButtonItem title="JSONKit解析" id="I5d-om-FZZ">
+                                        <connections>
+                                            <action selector="JSONKitParse:" destination="BYZ-38-t0r" id="oUj-Kn-GmT"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-YF-Vvf">
+                                <rect key="frame" x="0.0" y="79" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="SDK自带生成" id="K2P-sd-oHc">
+                                        <connections>
+                                            <action selector="JSONSerializationGenerate:" destination="BYZ-38-t0r" id="mBs-C2-JS2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SAo-1d-Kfa"/>
+                                    <barButtonItem title="SBJson生成" id="SHm-RV-GeA">
+                                        <connections>
+                                            <action selector="SBGenerate:" destination="BYZ-38-t0r" id="Cgi-gl-OV1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="L1I-p9-jnU"/>
+                                    <barButtonItem title="JSONKit生成" id="imQ-u3-WaX">
+                                        <connections>
+                                            <action selector="JSONKitGenerate:" destination="BYZ-38-t0r" id="JiG-kZ-DbG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e1I-nr-ZM3">
+                                <rect key="frame" x="0.0" y="123" width="414" height="613"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="113" id="PJR-Vl-Pre">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="113"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PJR-Vl-Pre" id="iJf-W8-UIR">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="112.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EU-VJ-9gm">
+                                                    <rect key="frame" x="14" y="41.666666666666657" width="325" height="60.333333333333343"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSE-1Z-Wwe">
+                                                    <rect key="frame" x="14" y="11.000000000000002" width="265" height="22.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2z-zE-2W1">
+                                                    <rect key="frame" x="315" y="11.000000000000002" width="88" height="21.666666666666671"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="M2z-zE-2W1" secondAttribute="trailing" constant="11" id="BTU-nX-GAw"/>
+                                                <constraint firstItem="M2z-zE-2W1" firstAttribute="leading" secondItem="bSE-1Z-Wwe" secondAttribute="trailing" constant="36" id="CQj-ap-JCF"/>
+                                                <constraint firstItem="5EU-VJ-9gm" firstAttribute="leading" secondItem="iJf-W8-UIR" secondAttribute="leading" constant="14" id="DWh-zk-eyz"/>
+                                                <constraint firstItem="5EU-VJ-9gm" firstAttribute="top" secondItem="M2z-zE-2W1" secondAttribute="bottom" constant="9" id="KcN-YC-o5d"/>
+                                                <constraint firstItem="5EU-VJ-9gm" firstAttribute="top" secondItem="bSE-1Z-Wwe" secondAttribute="bottom" constant="8" id="TEa-4v-Eqz"/>
+                                                <constraint firstItem="bSE-1Z-Wwe" firstAttribute="top" secondItem="iJf-W8-UIR" secondAttribute="top" constant="11" id="cNI-AW-PyR"/>
+                                                <constraint firstItem="bSE-1Z-Wwe" firstAttribute="leading" secondItem="iJf-W8-UIR" secondAttribute="leading" constant="14" id="meV-eW-3g1"/>
+                                                <constraint firstItem="M2z-zE-2W1" firstAttribute="top" secondItem="iJf-W8-UIR" secondAttribute="top" constant="11" id="pir-Xi-7ne"/>
+                                                <constraint firstAttribute="trailing" secondItem="5EU-VJ-9gm" secondAttribute="trailing" constant="75" id="qUB-dz-ZQh"/>
+                                                <constraint firstAttribute="bottom" secondItem="5EU-VJ-9gm" secondAttribute="bottom" constant="10.666666666666671" id="ssd-mE-SpD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Gj-zE-Kqg"/>
+                            <constraint firstItem="bb9-Ph-u4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9uE-eD-MNC"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GuV-iv-nhT"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jpy-S2-J12"/>
+                            <constraint firstItem="t3j-YF-Vvf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KC4-C4-PZO"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="top" secondItem="t3j-YF-Vvf" secondAttribute="bottom" id="LXr-Kw-tUs"/>
+                            <constraint firstItem="t3j-YF-Vvf" firstAttribute="top" secondItem="bb9-Ph-u4d" secondAttribute="bottom" constant="15" id="RBC-6O-q3A"/>
+                            <constraint firstItem="t3j-YF-Vvf" firstAttribute="top" secondItem="bb9-Ph-u4d" secondAttribute="bottom" constant="15" id="VC9-uB-cEt"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a2Q-wO-6Mh"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="haQ-oi-pRt"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="top" secondItem="t3j-YF-Vvf" secondAttribute="bottom" id="iyM-or-w7y"/>
+                            <constraint firstItem="bb9-Ph-u4d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kSi-UM-qfr"/>
+                            <constraint firstItem="e1I-nr-ZM3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mPA-bo-0HN"/>
+                            <constraint firstItem="bb9-Ph-u4d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n21-Rp-srU"/>
+                            <constraint firstItem="t3j-YF-Vvf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wcv-9p-Msa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="e1I-nr-ZM3" id="YyW-tv-POn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="26.90217391304348"/>
+        </scene>
+    </scenes>
+</document>
